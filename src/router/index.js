@@ -4,6 +4,9 @@ import HelloWorld from '@/components/HelloWorld'
 
 Vue.use(Router)
 
+import shop from "./shop";
+import admin from "./admin";
+
 export default new Router({
   routes: [
     {
@@ -58,6 +61,7 @@ export default new Router({
         title:"lativ搜索页面"
       }
     },
-    
+    ...shop,
+    ...admin
   ]
 })

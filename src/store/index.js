@@ -16,6 +16,8 @@ export default new Vuex.Store({
         m_cartList:[],//周考购物车数据
 
         lativ_history:[],//历史纪录本地存储
+        //用户列表本地本地存储
+        userList:[],
     },
     mutations:{
         addCart(state,payload){
@@ -32,6 +34,10 @@ export default new Vuex.Store({
         //添加历史纪录
         addHistory(state,data){
             state.lativ_history = data;
+        },
+        //设置用户列表的信息
+        setUserList(state,user){
+            state.userList = user;
         }
     },
     getters:{
